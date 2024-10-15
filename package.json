@@ -1,7 +1,7 @@
 {
 	"name": "@owretch/git-diff",
-	"version": "0.3.0",
-	"description": "A simple node module to generate a diff from local changes in a Git repository.",
+	"version": "0.4.0",
+	"description": "A simple ESM-only module to generate a diff from local changes in a Git repository.",
 	"author": "oWretch",
 	"license": "MPL-2.0",
 	"keywords": ["git", "diff", "file", "change"],
@@ -21,7 +21,7 @@
 	"compiler": {
 		"outDir": "./dist"
 	},
-	"files": ["dist", "src"],
+	"files": ["dist"],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/oWretch/npm-git-diff.git"

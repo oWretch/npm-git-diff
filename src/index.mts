@@ -1,5 +1,5 @@
 import * as os from "node:os";
-import type { Change, FileChange } from "./interfaces.js";
+import type { Change, FileChange } from "./interfaces.mjs";
 import { execFileSync } from "node:child_process";
 
 const git = os.platform().startsWith("win") ? "git.exe" : "git";
@@ -168,10 +168,10 @@ export default function (
 				}
 			}
 
-			changes.add(<Change>{
+			changes.add({
 				fromFile: fromFile,
 				toFile: toFile,
-			});
+			} as Change);
 		}
 	}
 	return changes;
