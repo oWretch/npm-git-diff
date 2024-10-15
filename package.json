@@ -1,13 +1,15 @@
 {
 	"name": "@owretch/git-diff",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "A simple node module to generate a diff from local changes in a Git repository.",
 	"author": "oWretch",
 	"license": "MPL-2.0",
 	"keywords": ["git", "diff", "file", "change"],
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"main": "dist/index",
+	"types": "dist/index",
 	"scripts": {
+		"cleand": "rm -rf dist/* *.tsbuildinfo",
+		"prebuild": "npm run clean",
 		"build": "tsc --build",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
