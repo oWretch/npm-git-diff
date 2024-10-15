@@ -1,4 +1,5 @@
 import * as os from "node:os";
+import type { Change, FileChange } from "./interfaces.js";
 import { execFileSync } from "node:child_process";
 
 const git = os.platform().startsWith("win") ? "git.exe" : "git";
@@ -9,7 +10,7 @@ const git = os.platform().startsWith("win") ? "git.exe" : "git";
  * @param contextLines number of lines of context to include in the generated diff
  * @returns a set of changes
  */
-export function getChanges(
+export default function (
 	files: Set<string> = new Set<string>(),
 	contextLines = 0,
 ): Set<Change> {

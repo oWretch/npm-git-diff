@@ -1,9 +1,9 @@
-interface Change {
+export interface Change {
 	fromFile?: FileChange;
 	toFile?: FileChange;
 }
 
-interface FileChange {
+export interface FileChange {
 	name: string;
 	start_line: number;
 	line_count: number;
