@@ -1,5 +1,4 @@
 import * as os from "node:os";
-import type { Change, FileChange } from "./interfaces.mjs";
 import { execFileSync } from "node:child_process";
 
 const git = os.platform().startsWith("win") ? "git.exe" : "git";
@@ -175,4 +174,16 @@ export default function (
 		}
 	}
 	return changes;
+}
+
+export interface Change {
+	fromFile?: FileChange;
+	toFile?: FileChange;
+}
+
+export interface FileChange {
+	name: string;
+	start_line: number;
+	line_count: number;
+	content: string;
 }
