@@ -17,6 +17,11 @@
   "engines": {
     "node": ">=22"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest",
+    "provenance": true
+  },
   "scripts": {
     "clean": "rm -rf dist/* *.tsbuildinfo",
     "prebuild": "npm run clean",
